@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200;300;400;500;600&family=Lalezar&family=Open+Sans:wght@700&family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono:ital@1&family=Roboto:wght@300;400;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color:#ff2c1f;
+    --text-color:#020307;
+    --bg-color:#fff;
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: var(--text-color);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(01-avengers-2012.jpg) fixed no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px 85px;
+    transition: 0.5s;
+    background: transparent;
+}
+header.shadow{
+    background: var(--text-color);
+}
+.logo{
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+header form{
+    width: 450px;
+    background-color: var(--bg-color);
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px;
+    align-items: center;
+    border: 2px solid var(--main-color);
+}
+header form input
+{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    height: max-content;
+    width: 100%;
+}
+header form input::placeholder{
+    color: var(--text-color);
+}
+header form i{
+    color: var(--main-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 10px 12px;
+    border-radius: 25px;
+}
+.movies{
+    width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 7rem;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 250px;
+    height: 300px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid var(--bg-color);
+    position: relative;
+}
+.box:hover .info{
+    opacity: 1;
+    transition: 0.4s all linear;
+}
+.box .box-img{
+    width: 100%;
+    height: 100%;
+}
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.box .info{
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    color: var(--bg-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+}
+.box .info h3{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.box .info P{
+    margin-bottom: 50px;
+}
+.box .info span{
+    margin-bottom: 50px;
+}

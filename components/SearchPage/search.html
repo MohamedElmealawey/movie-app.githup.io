@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- font awsome-->
+    <script src="https://kit.fontawesome.com/2a795c7923.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/components/SearchPage/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Search</title>
+</head>
+<body>
+    <header>
+        <a href='/index.html' class='logo'>
+            <i class="fa-solid fa-film"></i> Movies
+        </a>
+        <form action="">
+            <input type="text" class="search" onkeyup="getMovies(this.value)" placeholder="Search here...">
+            <i class="fa-solid fa-magnifying-glass icon"></i>      
+        </form>
+    </header>
+    <section class="movies">
+    </section>
+    <script src="javas.js"></script>
+</body>
+</html>
